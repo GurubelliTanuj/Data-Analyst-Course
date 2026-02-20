@@ -1,0 +1,61 @@
+1. Descriptive Statistics (The "What Happened?" phase)
+   Before you can predict the future, you have to describe the present.
+   Measures of Central Tendency: Mean: The average (sensitive to outliers).
+                                 Median: The middle value (great for skewed data like salaries).
+                                 Mode: The most frequent value (useful for categorical data).
+ 
+   Measures of Dispersion (Spread): Range: The gap between the max and min.
+                                    Variance: How far each point is from the mean.
+                                    Standard Deviation: The average distance of data points from the mean. 
+                                                        A low standard deviation means data is clustered 
+                                                        A high standard deviation means it's spread out.
+
+   Interquartile Range (IQR): The middle 50% of the data (used to identify outliers).
+
+2. Probability Distributions (Data usually follows a pattern)
+   Recognizing the pattern helps you choose the right analysis tool.
+   Normal Distribution (The Bell Curve): Most natural phenomena follow this. 
+          Key rule: the 68-95-99.7 Rule.68% of data falls within 1 standard deviation.95% falls within 2 standard deviations.
+   Skewness: Is your data "leaning"?Right-skewed: Long tail to the right (e.g., household income).
+   Left-skewed: Long tail to the left (e.g., age of retirement).
+   Binomial Distribution: For "Yes/No" or "Success/Failure" outcomes (e.g., Did the customer click the ad?).
+3. Inferential Statistics (The "What does it mean?" phase)
+   This is where you take a sample and make a conclusion about a whole population.
+   Hypothesis Testing:
+       Null Hypothesis (H_0): The "status quo." (e.g., "This new website design has NO effect on sales.")
+       Alternative Hypothesis (H_a): What you are trying to prove. (e.g., "The new design increases sales.")
+       P-Value: The probability that your results happened by random chance.
+       Rule of thumb: If p < 0.05, your result is "statistically significant" (you can reject the Null).
+       Confidence Intervals: Instead of saying "Sales will be $100," you say "We are 95% confident sales will be between $95 and $105.
+4. Relationship ModelingCorrelation: Measures the strength and direction of a relationship between two variables (ranges from -1 to 1).
+   Note: Correlation does not equal causation
+   Linear Regression: Predicting a dependent variable (y) based on an independent variable (x)
+   R-Squared: Tells you how much of the variation in y is explained by your model.
+
+----------------------------------------------------------------------------------
+
+Descriptive statistics (mean, median, mode, range, variance, standard deviation)
+Distributions (normal, uniform, skewed). 
+Variance measures spread: it “measures how far each number in the set is from the mean”.
+
+Probability fundamentals: random variables, probability mass/density functions
+Distributions (e.g. Binomial, Poisson, Normal)
+
+The Central Limit Theorem (CLT) is emphasized: it states that the distribution of a large-sample mean will approximate a normal distribution, even if the original data are not normal. 
+This “fundamental theorem” justifies using normal-based techniques for inference on many problems.
+
+For inference, we cover hypothesis testing: null/alternative hypotheses, p-values, and confidence intervals. 
+A p-value is the probability of observing data as extreme as we did under the null hypothesis.
+Smaller p-values indicate stronger evidence against the null. (Note: p-values do NOT measure the probability the hypothesis is true.) 
+We discuss Type I/II errors and choosing significance levels. For example, testing whether a new marketing campaign changed conversion rates involves a null hypothesis of no effect, computing a p-value, and deciding to reject or not.
+
+We also cover correlation and regression.
+The Pearson correlation coefficient quantifies linear association between two variables (ranges –1 to +1). 
+We caution that “correlation does not imply causation” – two variables may move together without one causing the other. 
+We introduce simple linear regression (fitting y = mx + b) as a predictive tool, and mention extensions to multivariate regression.
+
+Advanced topics include analysis of variance (ANOVA) for comparing means across groups, and basics of nonparametric tests (e.g. Chi-square, Mann-Whitney). 
+We examine sampling techniques (random sampling, stratified sampling) and when each is appropriate.
+
+Examples: We use scenarios like A/B tests (comparing two website designs using t-tests), and the “Beer and Diapers” classic example to show spurious correlation. 
+Datasets like normal_dist.csv illustrate CLT by simulating sample means.
