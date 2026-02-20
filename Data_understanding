@@ -1,0 +1,27 @@
+Module 1: Data Understanding
+
+Exploratory Data Analysis (EDA) investigates a dataset’s key characteristics and patterns. 
+  In the Data Understanding phase, we inspect and profile raw data to assess quality, identify anomalies, and prepare for analysis. 
+  This includes computing summary statistics (mean, median, mode, variance) and visualizing distributions (histograms, boxplots) for each variable. 
+  We check data types and ranges: for example, numeric fields may be normally distributed or skewed, and categorical fields have specific levels.
+
+We handle missing or bad values carefully. 
+  Missing data are “ubiquitous in real-world datasets”, and common treatments include deletion or imputation (mean/median substitution, KNN, or model-based). 
+  The choice depends on the missingness pattern: Missing Completely at Random (MCAR), at Random, or Not at Random. 
+  We also remove duplicates and check data consistency (e.g. date formats). 
+  Data cleaning may involve transforming variables (scaling, encoding categoricals) and creating new features. 
+  For example, date-time fields can be broken into day/month/year or even seasons, which may reveal trends (seasonality) in later analysis.
+
+Advanced steps include outlier detection and treatment.
+  Outliers can skew results; we identify them using statistical rules (e.g. z-scores or the 1.5×IQR rule) or visualization (boxplots). 
+  If outliers are errors, we remove or correct them; if they’re valid extremes, we may flag them for robust modeling. 
+  We also explore relationships between variables: scatter plots and correlation matrices show linear trends or clusters, while pivot tables or grouping (Excel pivot) reveal aggregates by category.
+
+Edge cases:
+  Real datasets often have issues like uneven sample sizes, categorical variables with many levels, or mixed data types. 
+  For example, a survey dataset might have text responses (“N/A”, “none”) that must be standardized to true NULL. 
+  We include practical tips (e.g. in Python/Pandas, use df.describe() and df.isnull().sum() to summarize gaps).
+
+Examples and datasets:
+  We use real-world examples such as the Titanic passenger dataset (finding which factors affect survival) and a sales ledger (summing revenue by region via pivot). 
+  Practice files include titanic.csv and sales.csv in the data/ folder. Code examples demonstrate using Python/Pandas for EDA and cleaning.
