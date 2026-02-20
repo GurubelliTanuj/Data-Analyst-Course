@@ -1,0 +1,29 @@
+Interview Questions
+
+Q: Explain the Central Limit Theorem.
+A: The CLT states that, under fairly general conditions, the distribution of the sample mean (when properly normalized) approaches a normal distribution as sample size grows.
+   It allows us to apply normal-based inference (e.g. confidence intervals, z-tests) even when raw data aren’t normal.
+
+Q: What is a p-value?
+A: In hypothesis testing, the p-value is the probability of obtaining results at least as extreme as the observed one, assuming the null hypothesis is true. 
+   A small p-value suggests the observed result is unlikely under the null, leading to its rejection.
+
+Q: How do variance and standard deviation differ?
+A: Variance is the average squared deviation from the mean; standard deviation is its square root. 
+   Standard deviation has the same units as the data and is often easier to interpret, but variance is used in many formulas because of its algebraic properties.
+
+Q: What does Pearson’s correlation coefficient measure?
+A: It measures the strength and direction of a linear relationship between two variables, with values between –1 (perfect negative) and +1 (perfect positive). 
+   For example, a correlation of 0.8 indicates a strong positive linear trend.
+
+Q: What’s the difference between one-tailed and two-tailed tests?
+A: In a one-tailed test, the alternative hypothesis specifies a direction (e.g. mean > 0), so we only look at one end of the distribution for significance. 
+   In a two-tailed test, we consider deviations on both ends (mean ≠ 0), effectively doubling the critical p-value region.
+
+Q: When would you use ANOVA?
+A: ANOVA is used to compare the means of three or more groups. It tests whether there is a statistically significant difference among group means.
+   For example, ANOVA can test if average sales differ across multiple regions.
+
+End-of-Module Project: Medical Study Analysis. Analyze a clinical trial dataset comparing two treatments. 
+Perform descriptive stats on patient outcomes, visualize differences (boxplots, bar charts), conduct hypothesis tests (t-test or ANOVA) to see if outcomes differ by treatment, and interpret p-values and confidence intervals. 
+Summarize findings in clear, layperson terms.
