@@ -1,0 +1,97 @@
+Excel Interface
+
+The Excel interface consists of a Ribbon (menu of commands) and a Sheet (grid of rows and columns). 
+The Ribbon provides shortcuts to Excel commands (e.g. File, Home, Insert tabs). 
+The Sheet is a grid of cells identified by column letters and row numbers – e.g. cell C4 is column C, row 4. 
+The Name Box (left of the formula bar) shows the active cell (like C4). Use cell references (A1, B2, etc.) in formulas.
+
+Use Case: Understanding the interface helps navigate data, input formulas, and format sheets.
+Interview Q: “How do you refer to cell B3?” – Answer: “By its column-letter and row-number (B3).”
+Common Mistakes: Not using $ for absolute references vs. relative. Forgetting the “=” before formulas.
+Tip: Double-click the bottom-right corner of a cell (Fill Handle) to auto-fill formulas down.
+
+Basic Formulas: SUM, AVERAGE, etc.
+SUM
+  The SUM function adds a range of numbers. Syntax: =SUM(number1, [number2], …) or =SUM(A1:A5). 
+  For example, =SUM(2,3,5,7,11) returns 28. It ignores text; any non-numeric cell is skipped.
+  Example:
+  =SUM(A1:A5)
+  (If A1–A5 contain 2,3,5,7,11, the result is 28.)
+
+  Use Case: Totals in budgeting, sales, or totals of survey responses. Financial analysts sum expenses or revenue columns.
+  Interview Q: “What happens if a cell in SUM’s range is text?” – Model Answer: SUM will ignore text values and only sum numeric cells.
+  Common Mistakes: Using + instead of SUM for large ranges; missing the =. Forgetting to extend the range when adding data.
+  Tip: Use the AutoSum button (∑) as a shortcut to insert =SUM(...). Always close parentheses if adding more arguments.
+
+AVERAGE
+
+  The AVERAGE function computes the arithmetic mean. Syntax: =AVERAGE(number1, [number2], …).
+  For example, =AVERAGE(2,3,5) returns 3. It ignores empty or text cells.
+  Example: =AVERAGE(B1:B5) (if B1–B5 have exam scores, returns the average.)
+
+  Use Case: Finding average sales, test scores, or central tendency of data.
+  Common Mistakes: Including headers/labels in range can give wrong result. Dividing by wrong count (use AVERAGE instead of manual sum/count to avoid error).
+  Tip: Compare AVERAGE with MEDIAN (average is sensitive to outliers; MEDIAN gives the middle value).
+
+COUNT, MAX, MIN, etc.
+
+  Other basic functions like COUNT (counts numbers), MAX, MIN, MEDIAN, MODE are similarly used. Syntax: e.g. =COUNT(A1:A5). They summarize data easily.
+
+Logical Functions: IF, AND, OR
+
+  The IF function returns one value if a condition is true and another if false. Syntax: =IF(logical_test, value_if_true, [value_if_false]).
+  For example, =IF(A1>100,"High","Low") checks if A1>100. IF can be nested for multiple conditions.
+  Example:=IF(C2="Yes", 1, 0)
+             (Returns 1 if cell C2 is Yes, otherwise 0.)
+
+  Use Case: Categorizing data (pass/fail, approval flags). Creating conditional labels (e.g. “Over Budget” vs “OK”).
+  Common Mistakes: Forgetting to put text in quotes. Not providing both outcomes (value_if_false is optional but missing it may return 0).
+  Tip: For multiple criteria, combine with AND/OR: e.g. =IF(AND(A1>0,B1<100),"Yes","No").
+
+  The AND and OR functions test multiple conditions. 
+  AND: returns TRUE only if all conditions are true. 
+  OR: returns TRUE if any condition is true. 
+  Syntax: =AND(cond1, cond2, …), =OR(cond1, cond2, …).
+
+Lookup Functions: VLOOKUP, INDEX/MATCH
+
+  The VLOOKUP function searches for a value in the leftmost column of a table and returns a value in the same row from a specified column.
+  Syntax: =VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup]). 
+  For example, =VLOOKUP("ID123", A2:E100, 3, FALSE) finds “ID123” in A2:A100 and returns the corresponding entry from column C (3rd column).
+
+  Use Case: Merging data from different sheets by matching IDs or names. Common in combining lookup tables or pulling reference data.
+  Common Mistakes: Data to lookup must be sorted if using TRUE (approximate match). VLOOKUP only searches leftmost column; for more flexibility use INDEX/MATCH.
+  Tip: Use FALSE (or 0) for exact match to avoid wrong results. INDEX/MATCH handles lookups in any direction and is more robust.
+
+Data Cleaning Functions: TRIM, CLEAN, etc.
+
+  Functions like TRIM(text) remove extra spaces, and CLEAN(text) removes non-printable characters. 
+  Useful for preparing imported data. For example, =TRIM(A1) ensures no leading/trailing spaces.
+
+  Use Case: Cleaning messy CSV or copy-pasted data before analysis.
+  Common Mistakes: Forgetting to replace original data; better to output cleaned data to new column to verify.
+
+Charts in Excel
+
+  Excel supports many chart types (bar, line, pie, scatter, etc.).
+  For example, a Line Chart shows trends over time – it “shows changes in value across continuous measurements, such as those made over time”. 
+  A Scatter Plot displays paired numerical data as points, revealing correlations. Bar charts compare categories by bar height.
+
+  Use Case: Visualizing sales trends, distribution of data, comparisons between categories.
+  Tip: Always label axes and provide a title. For dashboards, use combinations (small multiples, or pivot charts).
+
+Pivot Tables
+
+  A PivotTable is a powerful summarization tool: it “calculates, summarizes, and analyzes data” to reveal patterns and trends. 
+  It lets you drag fields into rows, columns, and values to group and aggregate data without manual formulas.
+
+  Example Workflow: Insert → PivotTable, select data range, then add fields (e.g. Sales by Region and Quarter).
+
+  Use Case: Quickly summarizing large data sets, e.g. totaling sales by region and year, counting categories, or finding averages.
+  Common Mistakes: Not using Excel Tables or named ranges can cause the pivot not to update with new data.
+  Tip: Refresh pivot tables after data changes. Use slicers and filters in Excel or Power BI for interactivity.
+
+Conditional Formatting
+
+  Conditional formatting highlights cells based on rules (e.g. color negative numbers red). 
+  Use “Highlight Cell Rules” or “Data Bars.” It helps spot outliers or trends.
